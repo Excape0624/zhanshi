@@ -26,7 +26,7 @@ a {
 /* ========== Header ========== */
 .header {
     background: #fff;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.06);
     position: fixed;
     width: 100%;
     top: 0;
@@ -37,7 +37,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    height: 80px;
 }
 
 .logo {
@@ -77,9 +77,9 @@ a {
 
 /* ========== Carousel ========== */
 .hero {
-    margin-top: 80px;
+    margin-top: 84px;
     background: #111;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 84px;
 }
 
 .carousel {
@@ -215,7 +215,7 @@ a {
 .products {
     padding: 80px 0;
     background: #f5f6fa;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 84px;
 }
 
 .product-grid {
@@ -264,7 +264,7 @@ a {
 /* ========== About ========== */
 .about {
     padding: 80px 0;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 84px;
 }
 
 .about-content {
@@ -315,7 +315,7 @@ a {
 .contact {
     padding: 80px 0;
     background: #1a1a2e;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 84px;
 }
 
 .section-title-light {
