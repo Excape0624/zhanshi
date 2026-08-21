@@ -1,0 +1,635 @@
+/* ========== Base Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #2d3436;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========== Header ========== */
+.header {
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 36px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.nav {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-link {
+    padding: 8px 16px;
+    font-size: 15px;
+    color: #636e72;
+    border-radius: 6px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0984e3;
+    background: #f0f7ff;
+}
+
+/* ========== Carousel ========== */
+.hero {
+    margin-top: 64px;
+    background: #111;
+    scroll-margin-top: 64px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21/9;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border: none;
+    padding: 16px 14px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.carousel-prev { left: 16px; }
+.carousel-next { right: 16px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background: #fff;
+}
+
+/* ========== Buttons ========== */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #0984e3;
+}
+
+.btn-primary:hover {
+    background: #f0f7ff;
+}
+
+.btn-outline {
+    border: 2px solid #0984e3;
+    color: #0984e3;
+    background: transparent;
+    padding: 10px 28px;
+}
+
+.btn-outline:hover {
+    background: #0984e3;
+    color: #fff;
+}
+
+/* ========== Section Title ========== */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 48px;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: #0984e3;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* ========== Products ========== */
+.products {
+    padding: 80px 0;
+    background: #f5f6fa;
+    scroll-margin-top: 64px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    color: #2d3436;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.product-info p {
+    color: #636e72;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* ========== About ========== */
+.about {
+    padding: 80px 0;
+    scroll-margin-top: 64px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #636e72;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    background: #f5f6fa;
+    padding: 24px 40px;
+    border-radius: 12px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #0984e3;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #636e72;
+    margin-top: 4px;
+}
+
+/* ========== Contact ========== */
+.contact {
+    padding: 80px 0;
+    background: #1a1a2e;
+    scroll-margin-top: 64px;
+}
+
+.section-title-light {
+    color: #fff;
+}
+
+.section-title-light::after {
+    background: #fff;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    color: #fff;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    color: #b2bec3;
+    font-size: 14px;
+}
+
+.wechat-qr {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.wechat-qr img {
+    width: 260px;
+    height: 260px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+}
+
+.wechat-qr p {
+    margin-top: 14px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ========== Product Detail Modal ========== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 680px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #636e72;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #2d3436;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-img {
+    width: 100%;
+}
+
+.modal-img img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    display: block;
+}
+
+.modal-info {
+    padding: 28px 32px 32px;
+}
+
+.modal-info h2 {
+    font-size: 26px;
+    color: #2d3436;
+    margin-bottom: 16px;
+}
+
+.modal-info p {
+    font-size: 15px;
+    color: #636e72;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.product-card {
+    cursor: pointer;
+}
+
+/* ========== Footer ========== */
+.footer {
+    background: #2d3436;
+    color: #fff;
+    padding: 28px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 16px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 8px;
+    }
+
+    .nav {
+        gap: 4px;
+        margin-top: 8px;
+    }
+
+
+
+    /* 手机端轮播：细长指示条、淡化箭头 */
+    .carousel-track {
+        aspect-ratio: 16/9;
+    }
+
+    .carousel-dot {
+        width: 20px;
+        height: 3px;
+        border-radius: 2px;
+    }
+
+    .carousel-dot.active {
+        width: 30px;
+    }
+
+    .carousel-arrow {
+        padding: 8px 6px;
+        font-size: 14px;
+        opacity: 0.3;
+        background: rgba(0,0,0,0.15);
+    }
+
+    /* 产品：一排两个 */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .product-info .btn-outline {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* 关于：三框并排，字体缩小 */
+    .about {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat-item {
+        padding: 12px 8px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    /* 联系：文字和二维码左右排版 */
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .contact-item {
+        margin-bottom: 16px;
+        gap: 10px;
+    }
+
+    .contact-icon {
+        font-size: 22px;
+    }
+
+    .contact-item h4 {
+        font-size: 14px;
+    }
+
+    .contact-item p {
+        font-size: 12px;
+    }
+
+    .wechat-qr img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .wechat-qr p {
+        font-size: 12px;
+    }
+
+    /* 手机端详情模态框 */
+    .modal-content {
+        width: 92%;
+        max-height: 85vh;
+    }
+
+    .modal-img img {
+        max-height: 220px;
+    }
+
+    .modal-info {
+        padding: 20px 20px 24px;
+    }
+
+    .modal-info h2 {
+        font-size: 20px;
+    }
+
+    .modal-info p {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+}

@@ -1,0 +1,1 @@
+# D:\code\zhanshi\ossutil.exe cp -r . oss://yhy0624/ -f --exclude .git --exclude node_modules --exclude ossutil --exclude package-lock.json --exclude .ossutilconfig --exclude zhanshi_backup --exclude bun.lock --exclude test_remote.html
