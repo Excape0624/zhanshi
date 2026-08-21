@@ -2,8 +2,7 @@ node_modules/
 .ossutilconfig
 ossutil.exe
 ossutil-v1.7.19-windows-amd64/
+ossutil_output/
 zhanshi_backup/
 bun.lock
 package-lock.json
-test_remote.html
-check_oss.html
